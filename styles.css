@@ -1,8 +1,8 @@
 /* ===== Färger (variabler) ===== */
 :root {
-    --bla: #1B6F8A;
+    --bla: #155A70;
     --sand: #F2E3C6;
-    --orange: #E8743B;
+    --orange: #B8471A;
     --mork: #2B2B2B;
     --vit: #FFFFFF;
 }
@@ -14,7 +14,7 @@
 
 body {
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
     color: var(--mork);
     background-color: var(--vit);
     line-height: 1.6;
@@ -23,7 +23,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
     line-height: 1.2;
 }
 
@@ -46,7 +46,7 @@ img {
 }
 
 .logo {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
     font-weight: 700;
     font-size: 24px;
     color: var(--vit);
@@ -113,7 +113,7 @@ img {
 }
 
 .knapp:hover {
-    background-color: #C95E2A;
+    background-color: #9A3A12;
 }
 
 /* ===== Innehåll ===== */
