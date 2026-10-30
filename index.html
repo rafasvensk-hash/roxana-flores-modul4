@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport: gör sidan responsiv på mobilen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hotel El Tunco ligger direkt vid stranden i El Tunco, El Salvador. Bo nära vågorna, surfa och njut av solnedgången.">
+    <title>Hotel El Tunco – Hem</title>
+    <!-- Google Fonts: Montserrat (rubriker) och Open Sans (brödtext) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header med logga och navigering -->
+    <header class="site-header">
+        <a href="index.html" class="logo">Hotel El Tunco</a>
+
+        <!-- Hamburgermeny: JavaScript (script.js) visar och döljer menyn på mobil -->
+        <button type="button" class="meny-ikon" id="meny-knapp" aria-label="Öppna menyn"
+            aria-expanded="false">&#9776;</button>
+
+
+        <nav class="meny">
+            <ul>
+                <li><a href="index.html" class="aktiv">Hem</a></li>
+                <li><a href="boka.html">Boka</a></li>
+                <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="hitta.html">Hitta</a></li>
+                <li><a href="kontakta.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero: stor bild med rubrik och knapp -->
+        <section class="hero">
+            <h1>Välkommen till El Tunco</h1>
+            <a href="boka.html" class="knapp">Boka nu</a>
+        </section>
+
+        <!-- Om hotellet -->
+        <section class="innehall">
+            <h2>Om hotellet</h2>
+            <p>Hotel El Tunco ligger direkt vid stranden i El Tunco, en av El Salvadors mest kända surfbyar. Här bor du
+                nära vågorna, äter lokal mat och ser solnedgången från terrassen.</p>
+        </section>
+
+        <!-- Tre kort: på datorn bredvid varandra, på mobilen under varandra -->
+        <div class="kort-lista">
+            <article class="kort">
+                <img src="img/rum.webp" alt="Ljust hotellrum med utsikt mot havet" width="380" height="240">
+                <h3>Rum</h3>
+            </article>
+            <article class="kort">
+                <img src="img/surf.webp" alt="Surfare på en våg vid El Tunco" width="380" height="240">
+                <h3>Surf</h3>
+            </article>
+            <article class="kort">
+                <img src="img/restaurang.webp" alt="Bord med lokal mat på restaurangen" width="380" height="240">
+                <h3>Restaurang</h3>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer med kontaktinformation -->
+    <footer class="site-footer">
+        <h2>Kontakt</h2>
+        <address>
+            Playa El Tunco, La Libertad, El Salvador<br>
+            Tel: <a href="tel:+50300000000">+503 0000 0000</a><br>
+            E-post: <a href="mailto:info@hotelsElTuncos.com">info@hotelsElTuncos.com</a>
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

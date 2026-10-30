@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontakta Hotel El Tunco. Skicka ett meddelande så svarar vi så snart vi kan.">
+    <title>Hotel El Tunco – Kontakt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">Hotel El Tunco</a>
+        <button type="button" class="meny-ikon" id="meny-knapp" aria-label="Öppna menyn"
+            aria-expanded="false">&#9776;</button>
+
+        <nav class="meny">
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="boka.html">Boka</a></li>
+                <li><a href="aktiviteter.html">Aktiviteter</a></li>
+                <li><a href="hitta.html">Hitta</a></li>
+                <li><a href="kontakta.html" class="aktiv">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="innehall">
+            <h1>Kontakta oss</h1>
+            <p>Har du frågor? Skriv till oss så svarar vi så snart vi kan.</p>
+
+            <!-- Flexbox: formulär och karta bredvid varandra på datorn -->
+            <div class="kontakt-layout">
+                <form class="formular" action="#" method="post">
+                    <label for="namn">Namn</label>
+                    <input type="text" id="namn" name="namn" required>
+
+                    <label for="epost">E-post</label>
+                    <input type="email" id="epost" name="epost" required>
+
+                    <label for="meddelande">Meddelande</label>
+                    <textarea id="meddelande" name="meddelande" required></textarea>
+
+                    <button type="submit" class="knapp">Skicka</button>
+                </form>
+
+                <!-- Google Maps inbäddad karta -->
+                <div class="karta">
+                    <iframe src="https://www.google.com/maps?q=El+Tunco,+La+Libertad,+El+Salvador&amp;output=embed"
+                        title="Karta över El Tunco" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <h2>Kontakt</h2>
+        <address>
+            Playa El Tunco, La Libertad, El Salvador<br>
+            Tel: <a href="tel:+50300000000">+503 0000 0000</a><br>
+            E-post: <a href="mailto:info@hotelsElTuncos.com">info@hotelsElTuncos.com</a>
+        </address>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

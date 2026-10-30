@@ -1,0 +1,335 @@
+/* ===== Färger (variabler) ===== */
+:root {
+    --bla: #1B6F8A;
+    --sand: #F2E3C6;
+    --orange: #E8743B;
+    --mork: #2B2B2B;
+    --vit: #FFFFFF;
+}
+
+/* ===== Grundinställningar ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--mork);
+    background-color: var(--vit);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+}
+
+/* Responsiva bilder: aldrig bredare än sin behållare */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Header och navigering (Flexbox) ===== */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 80px;
+    padding: 0 120px;
+    background-color: var(--bla);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--vit);
+    text-decoration: none;
+}
+
+.meny ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.meny a {
+    color: var(--vit);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.meny a:hover,
+.meny a.aktiv {
+    color: var(--sand);
+    text-decoration: underline;
+}
+
+/* Hamburgerikonen syns bara på mobil */
+
+.meny-ikon {
+    display: none;
+}
+
+/* ===== Hero ===== */
+.hero {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 120px;
+    color: var(--vit);
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("img/hero.webp") center / cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0 0 24px;
+}
+
+/* ===== Knapp ===== */
+.knapp {
+    display: inline-block;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--orange);
+    color: var(--vit);
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.knapp:hover {
+    background-color: #C95E2A;
+}
+
+/* ===== Innehåll ===== */
+.innehall {
+    padding: 60px 120px;
+}
+
+.innehall h1 {
+    font-size: 48px;
+    margin: 0 0 16px;
+}
+
+.innehall h2 {
+    font-size: 32px;
+    margin: 0 0 16px;
+}
+
+.innehall p {
+    font-size: 18px;
+    max-width: 65ch;
+}
+
+/* ===== Kort (Grid) ===== */
+.kort-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 120px 60px;
+}
+
+.kort img {
+    width: 100%;
+    aspect-ratio: 380 / 240;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.kort h3 {
+    font-size: 24px;
+    margin: 16px 0 0;
+}
+
+/* ===== Formulär ===== */
+.formular {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.formular label {
+    margin: 16px 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.formular input,
+.formular select,
+.formular textarea {
+    height: 48px;
+    padding: 12px;
+    border: 1px solid #BDBDBD;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.formular textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.formular .knapp {
+    margin-top: 32px;
+    align-self: flex-start;
+}
+
+/* ===== Kontakt: formulär och karta bredvid varandra ===== */
+.kontakt-layout {
+    display: flex;
+    gap: 60px;
+}
+
+.kontakt-layout .formular,
+.karta {
+    flex: 1;
+}
+
+.karta iframe {
+    width: 100%;
+    height: 480px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    min-height: 200px;
+    padding: 40px 120px;
+    background-color: var(--mork);
+    color: var(--vit);
+}
+
+.site-footer h2 {
+    font-size: 24px;
+    margin: 0 0 12px;
+}
+
+.site-footer address {
+    font-style: normal;
+    font-size: 18px;
+}
+
+.site-footer a {
+    color: var(--sand);
+}
+
+/* ===== Media queries (alltid sist) ===== */
+
+/* Surfplatta: formulär och karta under varandra */
+@media (max-width: 900px) {
+    .kontakt-layout {
+        flex-direction: column;
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    .site-header {
+        min-height: 60px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    /* Visa hamburgerikonen, göm menyn tills man klickar */
+    .meny-ikon {
+        display: block;
+        color: var(--vit);
+        font-size: 28px;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+
+    .meny {
+        display: none;
+        width: 100%;
+    }
+
+    .meny.oppen {
+        display: block;
+    }
+
+    .meny ul {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 16px;
+    }
+
+    .meny a {
+        display: block;
+        padding: 12px 0;
+    }
+
+    .hero {
+        min-height: 300px;
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .knapp {
+        padding: 12px 24px;
+        font-size: 18px;
+    }
+
+    .innehall {
+        padding: 40px 20px;
+    }
+
+    .innehall h1 {
+        font-size: 28px;
+    }
+
+    .innehall h2 {
+        font-size: 24px;
+    }
+
+    .innehall p {
+        font-size: 16px;
+    }
+
+    /* Korten under varandra: en kolumn */
+    .kort-lista {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 20px 40px;
+    }
+
+    .kort h3 {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    .karta iframe {
+        height: 250px;
+    }
+
+    .site-footer {
+        padding: 20px;
+    }
+
+    .site-footer address {
+        font-size: 16px;
+    }
+}
